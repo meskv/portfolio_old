@@ -13,7 +13,7 @@ $font-secondary: "Source Code Pro", monospace;
 // Vairables
 $black: #111;
 $white: #fff;
-$ascent-color: #E91E63;
+$ascent-color: #e91e63;
 // $ascent-color: #02D1AC;
 // $ascent-color: #f46036;
 $border-color: #fff;
@@ -80,6 +80,7 @@ li {
 
     .nav-items {
         font-family: $font-3;
+        font-weight: 600;
         ul {
             display: flex;
             list-style: none;
@@ -92,6 +93,12 @@ li {
             li {
                 margin: 0 10px;
                 font-size: 1.4rem;
+            }
+        }
+
+        .navlinks {
+            &:hover {
+                border-bottom: 2px solid $ascent-color;
             }
         }
     }
@@ -179,6 +186,7 @@ li {
         h1 {
             text-align: center;
             font-size: 3rem;
+            color: $ascent-color;
         }
 
         p {
@@ -217,7 +225,7 @@ li {
     color: $white;
     // margin: 2rem 2rem;
     padding: 0 4rem;
-    
+
     .contact-img {
         width: 50%;
         color: white;
@@ -229,9 +237,11 @@ li {
     }
 
     .contact-info {
+        // min-height: min-content;
         width: 50%;
         h1 {
             font-size: 3rem;
+            color: $ascent-color;
         }
 
         p {
@@ -250,6 +260,117 @@ li {
             &:hover {
                 color: $white;
                 background-color: $ascent-color;
+            }
+        }
+
+        .contact-box {
+            text-align: left;
+
+            .contact-title {
+                font-size: 2rem;
+            }
+
+            .desc {
+                margin: 0.5rem 0;
+            }
+            i {
+                color: $ascent-color;
+                display: inline;
+                font-size: 2rem;
+                margin-right: 1rem;
+                text-align: left;
+            }
+            p {
+                display: inline;
+                font-family: Roboto, sans-serif;
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.education {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $white;
+    color: $black;
+    // margin: 2rem 2rem;
+    padding: 0 4rem;
+
+    .education-img {
+        width: 50%;
+        color: white;
+        padding: 4rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .education-info {
+        // min-height: min-content;
+        width: 50%;
+        h1 {
+            font-size: 3rem;
+            color: $ascent-color;
+        }
+
+        p {
+            margin-bottom: 2rem;
+        }
+
+        .education-btn {
+            color: $ascent-color;
+            border: 2px solid $ascent-color;
+            padding: 1rem 2rem;
+            font-size: 1.3rem;
+
+            transition: 0.4s ease-in;
+            border-radius: 0.4rem;
+
+            &:hover {
+                color: $white;
+                background-color: $ascent-color;
+            }
+        }
+
+        .education-box {
+            text-align: left;
+
+            .education-title {
+                font-size: 2rem;
+            }
+
+            .desc {
+                border-left: 5px solid $ascent-color;
+                padding-left: 2rem;
+                margin: 0.5rem 0;
+
+                .education-title {
+                    display: inline;
+                }
+                p {
+                    display: block;
+                    padding-left: 4rem;
+                    margin-bottom: 0.8rem;
+                }
+            }
+            i {
+                color: $ascent-color;
+                display: inline;
+                font-size: 2rem;
+                margin-right: 1rem;
+                text-align: left;
+            }
+            p {
+                display: inline;
+                font-family: Roboto, sans-serif;
+                font-size: 1.2rem;
+                font-weight: 600;
             }
         }
     }
@@ -290,6 +411,22 @@ li {
         .profile-img {
             width: 100%;
             margin-top: 2rem;
+        }
+    }
+
+    .contact {
+        flex-direction: column;
+        text-align: center;
+
+        padding: 2rem 0;
+    }
+
+    .education {
+        flex-direction: column;
+        text-align: center;
+
+        .education-info {
+            width: 100%;
         }
     }
 }
