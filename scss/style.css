@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;700&family=Poppins&family=Roboto&family=Source+Code+Pro:wght@300;400&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -41,10 +45,10 @@ li {
 }
 
 .navbar .logo h1 {
+  color: #fff;
   font-weight: bolder;
   font-family: "Baloo Bhai 2", cursive;
   font-size: 3rem;
-  color: #e91e63;
 }
 
 .navbar .nav-items {
@@ -60,7 +64,7 @@ li {
 }
 
 .navbar .nav-items ul a {
-  color: #e91e63;
+  color: #fff;
 }
 
 .navbar .nav-items ul li {
@@ -386,6 +390,27 @@ li {
   color: #fff;
   font-size: 3rem;
   margin: 10px;
+}
+
+.back-to-top {
+  background: #e91e63;
+  border: none;
+  border-radius: 50%;
+  bottom: 15px;
+  color: #111;
+  cursor: pointer;
+  font-size: 16px;
+  height: 44px;
+  line-height: 1;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 44px;
+  z-index: 999;
 }
 
 @media only screen and (max-width: 991px) {

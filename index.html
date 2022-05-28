@@ -161,11 +161,19 @@
                         <p>National institute of Technology, Andhra Pradesh</p>
                         <p>C.G.P.A - 8.11</p>
                     </div>
+
                     <div class="desc">
                         <i class="fa-solid fa-school"></i>
-                        <h3 class="education-title">Schooling</h3>
+                        <h3 class="education-title">XII</h3>
                         <p>Jawahar Navodaya Vidyalaya, Giridih</p>
                         <p>Percentage - 89.4% (CBSE)</p>
+                    </div>
+
+                    <div class="desc">
+                        <i class="fa-solid fa-school"></i>
+                        <h3 class="education-title">X</h3>
+                        <p>Jawahar Navodaya Vidyalaya, Giridih</p>
+                        <p>C.G.P.A - 9.8 (CBSE)</p>
                     </div>
                 </div>
             </div>
@@ -183,7 +191,29 @@
         <a href="https://www.linkedin.com/in/me-skv/"><i class="fa-brands fa-linkedin"></i></a>
         <a href="mailto:krsk1495@gmail.com"><i class="fa-solid fa-envelope"></i></a>
     </div>
+    <button id="scrollToTop" class="back-to-top" style="display: inline;"><i class="fa fa-chevron-up"></i></button>
     <!-- Footer ends -->
+
+
+    <script>
+        // back to top
+        // using jquery
+        const htmlElement = document.querySelector("html");
+        const scrollToTop = document.querySelector("#scrollToTop");
+
+        // scrollToTop.addEventListener("click", () => {
+        //     $(htmlElement).animate({ scrollTop: $(htmlElement).offset().top }, 400);
+        // });
+
+        window.addEventListener("scroll", () => {
+            if (htmlElement.scrollTop > 0) {
+                scrollToTop.style.opacity = 1;
+            } else {
+                scrollToTop.style.opacity = 0;
+            }
+        });
+
+    </script>
 
 
 </body>

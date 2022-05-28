@@ -30,6 +30,10 @@ $screen-xlg-max: 2560px;
 // ----------- Vairable ends -------------
 
 // CSS STYLING
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -70,11 +74,11 @@ li {
 
     .logo {
         h1 {
-            // color: $white;
+            color: $white;
+            // color: $ascent-color;
             font-weight: bolder;
             font-family: $font-primary;
             font-size: 3rem;
-            color: $ascent-color;
         }
     }
 
@@ -86,8 +90,8 @@ li {
             list-style: none;
 
             a {
-                // color: $white;
-                color: $ascent-color;
+                color: $white;
+                // color: $ascent-color;
             }
 
             li {
@@ -391,6 +395,29 @@ li {
 
         margin: 10px;
     }
+}
+
+// bacl-to-top button
+.back-to-top {
+    background: $ascent-color;
+    border: none;
+    border-radius: 50%;
+    bottom: 15px;
+    // box-shadow: 0 0 5px rgb(37 36 36 / 69%);
+    color: $black;
+    cursor: pointer;
+    // display: inline-block;
+    font-size: 16px;
+    height: 44px;
+    line-height: 1;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s;
+    width: 44px;
+    z-index: 999;
 }
 
 // Media Query
