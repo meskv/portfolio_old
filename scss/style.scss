@@ -85,9 +85,10 @@ li {
     .nav-items {
         font-family: $font-3;
         font-weight: 600;
-        ul {
+        .nav-items {
             display: flex;
             list-style: none;
+            // padding: 2rem;
 
             a {
                 color: $white;
@@ -102,7 +103,8 @@ li {
 
         .navlinks {
             &:hover {
-                border-bottom: 2px solid $ascent-color;
+                // border-bottom: 2px solid $ascent-color;
+                transform: scale(1.1);
             }
         }
     }
@@ -344,6 +346,7 @@ li {
         }
 
         .education-box {
+            // border-left: 5px solid $ascent-color;
             text-align: left;
 
             .education-title {
@@ -352,6 +355,7 @@ li {
 
             .desc {
                 border-left: 5px solid $ascent-color;
+                
                 padding-left: 2rem;
                 margin: 0.5rem 0;
 
@@ -396,6 +400,12 @@ li {
 
         margin: 10px;
     }
+}
+.copy {
+    background-color: $ascent-color;
+    color: $white;
+    text-align: center;
+    padding: 0.5rem 0;
 }
 
 // bacl-to-top button

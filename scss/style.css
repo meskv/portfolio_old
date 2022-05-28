@@ -56,24 +56,25 @@ li {
   font-weight: 600;
 }
 
-.navbar .nav-items ul {
+.navbar .nav-items .nav-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
 
-.navbar .nav-items ul a {
+.navbar .nav-items .nav-items a {
   color: #fff;
 }
 
-.navbar .nav-items ul li {
+.navbar .nav-items .nav-items li {
   margin: 0 10px;
   font-size: 1.4rem;
 }
 
 .navbar .nav-items .navlinks:hover {
-  border-bottom: 2px solid #e91e63;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .hamburger {
@@ -391,6 +392,13 @@ li {
   color: #fff;
   font-size: 3rem;
   margin: 10px;
+}
+
+.copy {
+  background-color: #e91e63;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 0;
 }
 
 .back-to-top {
