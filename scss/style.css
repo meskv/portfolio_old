@@ -31,7 +31,7 @@ li {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  height: 10vh;
+  height: 60px;
   color: #fff;
   background-color: #111;
   display: -webkit-box;
