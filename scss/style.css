@@ -78,6 +78,10 @@ li {
           align-items: center;
 }
 
+.navbar .nav-menu .nav-item {
+  margin: 1.5rem;
+}
+
 .navbar .nav-menu .nav-item:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -451,7 +455,7 @@ li {
     left: 0;
   }
   .navbar .nav-item {
-    margin: 2rem 0;
+    margin: 2.5rem 0;
   }
   .navbar .hamburger {
     display: block;

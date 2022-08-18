@@ -98,6 +98,7 @@ li {
         justify-content: space-between;
         align-items: center;
         .nav-item {
+            margin: 1.5rem;
             &:hover {
                 transform: scale(1.1);
             }
@@ -453,7 +454,7 @@ li {
         }
 
         .nav-item {
-            margin: 2rem 0;
+            margin: 2.5rem 0;
         }
 
         .hamburger {
