@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;700&family=Poppins&family=Roboto&family=Source+Code+Pro:wght@300;400&display=swap");
 html {
   scroll-behavior: smooth;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 * {
@@ -24,24 +27,36 @@ h6 {
 a,
 p,
 li {
+  list-style: none;
   font-family: "Source Code Pro", monospace;
 }
 
 .navbar {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  height: 60px;
-  color: #fff;
-  background-color: #111;
+  background: #111;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 1.5rem;
+}
+
+.navbar .hamburger {
+  display: none;
+}
+
+.navbar .hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
 }
 
 .navbar .logo h1 {
@@ -51,34 +66,27 @@ li {
   font-size: 3rem;
 }
 
-.navbar .nav-items {
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-}
-
-.navbar .nav-items .nav-items {
+.navbar .nav-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.navbar .nav-items .nav-items a {
-  color: #fff;
-}
-
-.navbar .nav-items .nav-items li {
-  margin: 0 10px;
-  font-size: 1.4rem;
-}
-
-.navbar .nav-items .navlinks:hover {
+.navbar .nav-menu .nav-item:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.hamburger {
-  font-size: 2rem;
+.navbar .nav-menu .nav-item .nav-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
 }
 
 .main {
@@ -398,7 +406,7 @@ li {
   background-color: #e91e63;
   color: #fff;
   text-align: center;
-  padding: 0.5rem 0;
+  padding: 0.3rem 0;
 }
 
 .back-to-top {
@@ -423,6 +431,32 @@ li {
 }
 
 @media only screen and (max-width: 991px) {
+  .navbar .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #e91e63;
+    width: 100%;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+  .navbar .nav-menu.active {
+    left: 0;
+  }
+  .navbar .nav-item {
+    margin: 2rem 0;
+  }
+  .navbar .hamburger {
+    display: block;
+    cursor: pointer;
+  }
   .main .info {
     width: 100%;
   }

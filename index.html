@@ -22,7 +22,7 @@
 <body>
 
     <!-- Navbar start -->
-    <div class="navbar">
+    <!-- <div class="navbar">
         <div class="logo">
             <a href="#">
                 <h1>Suman</h1>
@@ -32,24 +32,52 @@
         <div class="nav-items">
             <div class="nav-items">
                 <a href="#home">
-                    <li class="navlinks">Home</li>
+                    <li class="nav-link">Home</li>
                 </a>
                 <a href="#about">
-                    <li class="navlinks">About</li>
+                    <li class="nav-link">About</li>
                 </a>
                 <a href="#contact">
-                    <li class="navlinks">Contact</li>
+                    <li class="nav-link">Contact</li>
                 </a>
                 <a href="#education">
-                    <li class="navlinks">Education</li>
+                    <li class="nav-link">Education</li>
                 </a>
             </div>
         </div>
 
-        <!-- <i class="fa-solid fa-bars"></i> -->
-
-
-    </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div> -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/">
+                <h1>Suman</h1>
+            </a>
+        </div>
+        <div class="nav-menu">
+            <li class="nav-item">
+                <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Education</a>
+            </li>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
     <!-- Navbar ends -->
 
 
@@ -197,6 +225,27 @@
 
 
     <script>
+        // navbar
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+
+
         // back to top
         // using jquery
         const htmlElement = document.querySelector("html");
