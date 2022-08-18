@@ -33,6 +33,7 @@ $screen-xlg-max: 2560px;
 html {
     scroll-behavior: smooth;
     width: fit-content;
+    font-size: calc(12px + 0.350625vw);
 }
 
 * {
@@ -398,11 +399,12 @@ li {
     a {
         text-decoration: none;
         color: $white;
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin: 10px;
     }
 }
 .copy {
+    display: block;
     background-color: $ascent-color;
     color: $white;
     text-align: center;

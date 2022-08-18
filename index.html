@@ -22,36 +22,6 @@
 <body>
 
     <!-- Navbar start -->
-    <!-- <div class="navbar">
-        <div class="logo">
-            <a href="#">
-                <h1>Suman</h1>
-            </a>
-        </div>
-
-        <div class="nav-items">
-            <div class="nav-items">
-                <a href="#home">
-                    <li class="nav-link">Home</li>
-                </a>
-                <a href="#about">
-                    <li class="nav-link">About</li>
-                </a>
-                <a href="#contact">
-                    <li class="nav-link">Contact</li>
-                </a>
-                <a href="#education">
-                    <li class="nav-link">Education</li>
-                </a>
-            </div>
-        </div>
-
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </div> -->
     <nav class="navbar">
         <div class="logo">
             <a href="/">
@@ -82,7 +52,7 @@
 
 
     <!-- Main start -->
-    <div id="home" class="main">
+    <section id="home" class="main">
         <div class="info">
             <div class="name">
                 <h1>Hi, I'm</h1>
@@ -98,43 +68,47 @@
             </div>
 
         </div>
-    </div>
+    </section>
 
     <!-- About section start -->
-    <div id="about" class="about">
-        <div class="about-info">
-            <h1>About Me</h1>
+    <section id="about">
+        <div class="about">
+            <div class="about-info">
+                <h1>About Me</h1>
 
-            <p>Hello! I'm Suman Kumar, from Giridih, The city of Giridih is known for its industrial and health sectors,
-                as well as its scenic beauty.</p>
+                <p>Hello! I'm Suman Kumar, from Giridih, The city of Giridih is known for its industrial and health
+                    sectors,
+                    as well as its scenic beauty.</p>
 
-            <p>I am a creative, time punctual, dedicated, goal-oriented individual with decent moral Values and
-                Ethicates along with a high-energy level, honed communication skills, strong organizational skills, and
-                meticulous attention to detail.</p>
+                <p>I am a creative, time punctual, dedicated, goal-oriented individual with decent moral Values and
+                    Ethicates along with a high-energy level, honed communication skills, strong organizational skills,
+                    and
+                    meticulous attention to detail.</p>
 
 
-            <p>I am pursuing my Bachelors of Techology in Electrical and Electronic Engineering from NIT
-                Andhra.(2020-2024) my current GPA is 8.11 out of 10.</p>
+                <p>I am pursuing my Bachelors of Techology in Electrical and Electronic Engineering from NIT
+                    Andhra.(2020-2024) my current GPA is 8.11 out of 10.</p>
 
-            <p>Here are a few of the other activities that I love to do!</p>
-            <ul class="hobby">
-                <li>Coding</li>
-                <li>Problem Solving</li>
-                <li>Mentoring</li>
-                <li>Sketching</li>
-                <li>Reading</li>
-                <li>Listening Poems</li>
-            </ul>
+                <p>Here are a few of the other activities that I love to do!</p>
+                <ul class="hobby">
+                    <li>Coding</li>
+                    <li>Problem Solving</li>
+                    <li>Mentoring</li>
+                    <li>Sketching</li>
+                    <li>Reading</li>
+                    <li>Listening Poems</li>
+                </ul>
 
+            </div>
+            <div class="profile-img">
+                <img src="./Profile.jpg" alt="">
+            </div>
         </div>
-        <div class="profile-img">
-            <img src="./Profile.jpg" alt="">
-        </div>
-    </div>
+    </section>
     <!-- About section ends -->
 
     <!-- Contact Section Start -->
-    <div class="contact" id="contact">
+    <section class="contact" id="contact">
         <div class="contact-img">
             <img src="./5124558.png" alt="">
             <!-- <a href="https://www.freepik.com/vectors/occupation">Occupation vector created by freepik -
@@ -166,11 +140,11 @@
 
             <!-- <a class="contact-btn" href="mailto:krsk1495@gmail.com">Mail Me</a> -->
         </div>
-    </div>
+    </section>
     <!-- Contact Section ends -->
 
     <!-- Education Section Start -->
-    <div class="education" id="education">
+    <section class="education" id="education">
         <div class="education-img">
             <img src="./5836.png" alt="">
             <!-- <a href="https://www.freepik.com/vectors/occupation">Occupation vector created by freepik -
@@ -208,7 +182,7 @@
 
             <!-- <a class="contact-btn" href="mailto:krsk1495@gmail.com">Mail Me</a> -->
         </div>
-    </div>
+    </section>
     <!-- Education Section ends -->
 
     <!-- Main ends -->
@@ -220,7 +194,8 @@
         <a href="mailto:krsk1495@gmail.com"><i class="fa-solid fa-envelope"></i></a>
     </div>
     <div class="copy">Designed and Developed By Suman Kumar Verma</div>
-    <button id="scrollToTop" class="back-to-top" style="display: inline;"><i class="fa fa-chevron-up"></i></button>
+    <button id="scrollToTop" class="back-to-top" style="display: inline;" onclick="topFunction()"><i
+            class="fa fa-chevron-up"></i></button>
     <!-- Footer ends -->
 
 
@@ -246,22 +221,26 @@
         }
 
 
-        // back to top
-        // using jquery
-        const htmlElement = document.querySelector("html");
-        const scrollToTop = document.querySelector("#scrollToTop");
+        // scroll to top
 
-        // scrollToTop.addEventListener("click", () => {
-        //     $(htmlElement).animate({ scrollTop: $(htmlElement).offset().top }, 400);
-        // });
+        scrolltoTopBtn = document.getElementById("scrollToTop");
 
-        window.addEventListener("scroll", () => {
-            if (htmlElement.scrollTop > 0) {
-                scrollToTop.style.opacity = 1;
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrolltoTopBtn.style.display = "block";
             } else {
-                scrollToTop.style.opacity = 0;
+                scrolltoTopBtn.style.display = "none";
             }
-        });
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
 
     </script>
 
